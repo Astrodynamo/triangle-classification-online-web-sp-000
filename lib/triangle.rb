@@ -9,7 +9,7 @@ class Triangle
   
   def kind
     case triangle
-    when @side_1 == @side_2 == @side_3
+    when @side_1 == @side_2 && @side_2 == @side_3
       return :equilateral
     end
   end
