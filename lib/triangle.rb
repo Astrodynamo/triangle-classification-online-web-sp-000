@@ -8,10 +8,15 @@ class Triangle
   end
   
   def kind
-    case
-    
-    end
+    case triangle
+    when @side_1 == @side_2 == @side_3
+      return :equilateral
+      when 
+  end
   
+  #Custom Error:
+  class TriangeError < StandardError
+    
   end
   
 end
