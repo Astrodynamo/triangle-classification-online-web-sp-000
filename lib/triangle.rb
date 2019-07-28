@@ -9,8 +9,15 @@ class Triangle
   
   def kind
     case 
-    when @side_1 == @side_2 && @side_2 == @side_3
-      return :equilateral
+      when @side_1 == @side_2 && @side_2 == @side_3
+        return :equilateral
+      when @side_1 == @side_2 && @side_2 != @side_3
+        return :isosceles
+      when @side_2 == @side_3 && @side_3 != @side_1
+        return :isosceles
+      when @side_1 == @side_3 && @side_3 != @side_2
+        return :isosceles
+      
     end
   end
   
