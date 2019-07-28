@@ -9,6 +9,8 @@ class Triangle
   
   def kind
     case 
+      when @side_1 <= 0 || @side_2 <= 0 || @side_3 <= 0
+        raise TriangleError
       when @side_1 == @side_2 && @side_2 == @side_3
         return :equilateral
       when @side_1 == @side_2 && @side_2 != @side_3
@@ -19,8 +21,7 @@ class Triangle
         return :isosceles
       when @side_1 != @side_2 && @side_2 != @side_3
         return :scalene
-      when @side_1 <= 0 || @side_2 <= 0 || @side_3 <= 0
-        raise TriangleError
+      
     end
   end
   
