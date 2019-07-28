@@ -13,6 +13,10 @@ class Triangle
         raise TriangleError
       when @side_1 + @side_2 <= @side_3
         raise TriangleError
+      when @side_3 + @side_2 <= @side_1
+        raise TriangleError
+      when @side_1 + @side_3 <= @side_2
+        raise TriangleError
       when @side_1 == @side_2 && @side_2 == @side_3
         return :equilateral
       when @side_1 == @side_2 && @side_2 != @side_3
