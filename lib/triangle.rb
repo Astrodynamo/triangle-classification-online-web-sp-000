@@ -15,7 +15,7 @@ class Triangle
   end
   
   #Custom Error:
-  class TriangeError < StandardError
+  class TriangleError < StandardError
     
   end
   
